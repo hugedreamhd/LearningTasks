@@ -15,8 +15,17 @@ void main(){
   people.add('한석봉');
   people.add('홍길동');
 
-  print(people.first);
-  print(people.last);
+  print(people[0]);
+  print(people[1]);
+
+  Map<int, List<String>> peopleMap = {
+    20 : people,
+    25 : people,
+  };
+
+  print(people[20]);
+  print(people[25]);
+
 }
 
 class Person{
