@@ -72,7 +72,7 @@ void main(){
     'id': 0,
     'age': 20,
   };
-
+  print(gildong['name']);
   print(gildong['name']);
   print(gildong['id']);
   print(gildong['age']);
