@@ -1,7 +1,11 @@
 import 'package:lecture_1130/game/charactor.dart';
 
+import 'slime.dart';
+
 class Dancer extends Charactor{
-  Dancer{super.name, super,hp};
+  Dancer(super.name, super.hp);
+
+
 
   @override
   void attack(Slime Slime){}

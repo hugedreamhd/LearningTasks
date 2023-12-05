@@ -17,13 +17,12 @@ class SuperHero extends Hero{
   SuperHero({required super.name, required super.hp});
 
   // Annotation 에너테이션
-@override
+  @override
   void run(){
-  print('발이 땀이 나도록 뛰었다.');
-}
+    print('발이 땀이 나도록 뛰었다.');
+  }
 
-@override
-  void attack
+
 }
 void main(){
   final hero = Hero(name: '홍길동', hp: 50);
