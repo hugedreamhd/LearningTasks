@@ -19,7 +19,9 @@ class Hero {
   void attack(){
     print('공격했습니다.');//노 리턴 공격 함수
   }
-
+  void run(){
+    print('달린다');
+  }
   void _die(){ //접근이 되게 만들면 안된다
 
     print('사망');
