@@ -18,7 +18,7 @@ class Wand {
     _name = n;
   }
   set m(double p) {
-    if (0.5 > p && 100 < p) {
+    if (0.5 >= p && p <= 100) {
       throw Exception('마력은 허용치 초과!');
     }
     _power = p;
