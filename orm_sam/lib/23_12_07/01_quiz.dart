@@ -11,7 +11,7 @@ class Book {
 
   @override
   bool operator ==(Object other) =>
-      identical(this, other) ||
+      identical(this, other ) ||
       other is Book &&
           runtimeType == other.runtimeType &&
           title == other.title &&
@@ -20,18 +20,21 @@ class Book {
 
   @override
   int get hashCode => title.hashCode ^ publishDate.hashCode ^ comment.hashCode;
+
+  Book copyWith({
+    String? title,
+    String? comment,
+    DateTime? publishDate,
+  }) {
+    return Book(
+      title: title ?? this.title,
+      comment: comment ?? this.comment,
+      publishDate: publishDate ?? this.publishDate,
+    );
+  }
 }
 
-Book copyWith({
-  String? title,
-  String? comment,
-}) {
-  return Book(
-    title: 'book1',
-    comment: 'comment',
-    publishDate: DateTime.now(),
-  );
-}
+
 
 void main() {
   Book book =
@@ -44,6 +47,8 @@ void main() {
       Book(title: 'book1', comment: 'comment', publishDate: DateTime.now());
   Book book5 =
       Book(title: 'book1', comment: 'comment', publishDate: DateTime.now());
+  Book book6 = book.copyWith();
+  print(book == book6);
 
   final List<String> books = [];
   books.add('book');
@@ -52,7 +57,9 @@ void main() {
   books.add('book3');
   books.add('book4');
 
-  books.sort((a, b) => -a.compareTo(b));
+  books.sort((a, b) => a.compareTo(b));
   print(book == book1);
   print(books);
 }
+
+
