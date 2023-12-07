@@ -59,6 +59,7 @@ void main() {
 
   books.sort((a, b) => a.compareTo(b));
   print(book == book1);
+  print(book == book5);
   print(books);
 }
 
