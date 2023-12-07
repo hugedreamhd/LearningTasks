@@ -4,3 +4,5 @@ class Charactor{
 
   Charactor(this.name, this.hp);
 }
+
+
